@@ -1,0 +1,5 @@
+2020-07-25 20:59:00.985  INFO 14848 --- [restartedMain] com.noob.blog.BlogApplication            : Starting BlogApplication on DESKTOP-84FHS72 with PID 14848 (E:\blog_project\target\classes started by asus in E:\blog_project)
+2020-07-25 20:59:00.989  INFO 14848 --- [restartedMain] com.noob.blog.BlogApplication            : The following profiles are active: pro
+2020-07-25 20:59:02.588  WARN 14848 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-25 20:59:02.907  WARN 14848 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-25 20:59:03.060  INFO 14848 --- [restartedMain] com.noob.blog.BlogApplication            : Started BlogApplication in 2.611 seconds (JVM running for 3.962)
