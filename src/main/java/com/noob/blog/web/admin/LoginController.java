@@ -1,6 +1,7 @@
 package com.noob.blog.web.admin;
 
 import com.noob.blog.po.User;
+import com.noob.blog.service.BlogService;
 import com.noob.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,9 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private BlogService blogService;
+
     @GetMapping // 默认使用顶部的全局配置
     public String loginPage() {
         return "admin/login";
@@ -36,6 +40,7 @@ public class LoginController {
             // 别传密码
             user.setPassword(null);
             session.setAttribute("user", user);
+            session.setAttribute("newblogs", blogService.listRecommendBlogTop(3));
             return "admin/index";
         } else {
             // 不能用 model，否则拿不到

@@ -69,17 +69,20 @@
                     <div class="three wide column">
                         <h4 class="ui inverted header m-opacity-mini">最新博客</h4>
                         <div class="ui inverted link list">
-                            <a href="#" class="item">用户故事 (User Story)</a>
+                            <a href="#" class="item" th:href="@{blog/{id}(id=${blog.id})}" target="_blank"
+                                th:each="blog : ${session.newblogs}" th:text="${blog.title}">用户故事 (User Story)</a>
+                            <!--/*-->
                             <a href="#" class="item">关于刻意练习的清单</a>
                             <a href="#" class="item">失败要趁早</a>
+                            <!--*/-->
                         </div>
                     </div>
 
                     <div class="three wide column">
                         <h4 class="ui inverted header m-opacity-mini">联系我</h4>
                         <div class="ui inverted link list">
-                            <a href="#" class="item">Email: lirenmi@163.com</a>
-                            <a href="#" class="item">QQ: 12345678</a>
+                            <a href="#" class="item">1193347519@qq.com</a>
+                            <a href="#" class="item">QQ: 1193347519</a>
                         </div>
                     </div>
 

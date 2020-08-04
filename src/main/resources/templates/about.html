@@ -55,31 +55,40 @@
                         </div>
                         <div class="ui attached segment">
                             <p class="m-text">
-                                萌新，一个独立开发者，折腾在 0 和 1 世界的大叔；
-                                一个终身学习者，誓将学习无限循环。希望结识刻意共同成长的小伙伴
+                                萌新，一只菜鸡，寻求不断进步。
                             </p>
 
                             <p class="m-text">
-                                热爱编程，喜欢折腾，正在探索高效学习编程技术的方法。。。
+                                希望能够在生活中平衡学习与娱乐。
                             </p>
                         </div>
 
                         <div class="ui attached segment">
-                            <div class="ui orange basic left pointing label">编程</div>
+                            <div class="ui orange basic left pointing label" th:each="type : ${types}">
+                                <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank"
+                                   th:text="${type.name}"></a>
+                            </div>
+
+                            <!--/*-->
                             <div class="ui orange basic left pointing label">写作</div>
                             <div class="ui orange basic left pointing label">思考</div>
-                            <div class="ui orange basic left pointing label">运动</div>
+                            <!--*/-->
                         </div>
 
                         <div class="ui attached segment">
-                            <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
-                            <div class="ui teal basic left pointing label m-margin-tb-tiny">JavaScript</div>
-                            <div class="ui teal basic left pointing label m-margin-tb-tiny">Node</div>
-                            <div class="ui teal basic left pointing label m-margin-tb-tiny">React</div>
+                            <div class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
+                                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank"
+                                   th:text="${tag.name}"></a>
+                            </div>
+                            <!--/*-->
+                            <div class="ui teal basic left pointing label m-margin-tb-tiny">Python</div>
+                            <div class="ui teal basic left pointing label m-margin-tb-tiny">Clojure</div>
+                            <div class="ui teal basic left pointing label m-margin-tb-tiny">C</div>
+                            <!--*/-->
                         </div>
 
                         <div class="ui bottom attached segment">
-                            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                            <a href="#" class="ui circular icon button" target="_blank" th:href="@{https://github.com/JosephEJohnston}"><i class="github icon"></i></a>
                             <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
                             <a href="#" class="ui qq circular icon button"
                                data-content="1176504109" data-position="bottom center">
@@ -89,7 +98,7 @@
 
                         <!-- 微信二维码显示 -->
                         <div class="ui wechat-qr flowing popup transition hidden">
-                            <img src="../static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 110px">
+                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
                         </div>
                     </div>
                 </div>
